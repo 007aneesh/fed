@@ -1,40 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quora Clone</title>
-  <link rel="icon" href="//qsf.fs.quoracdn.net/-4-ans_frontend_assets.favicon-new.ico-26-e7e93fe0a7fbc991.ico">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">Topics</a></li>
-        <li><a href="#">Notifications</a></li>
-        <li><a href="#">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quora Clone</title>
+    <link
+      rel="icon"
+      href="//qsf.fs.quoracdn.net/-4-ans_frontend_assets.favicon-new.ico-26-e7e93fe0a7fbc991.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="mobile">
+        <div class="top">
+          <div class="search-container">
+            <span class="material-symbols-outlined"> search </span>
+            Search
+          </div>
+          <div class="iconText">
+            <h1>Quora</h1>
+          </div>
+          <div class="add-container">
+            <span class="material-symbols-outlined"> add_circle </span>
+            Add
+          </div>
+        </div>
+        <div class="bottom">
+          <ul id="menuList">
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> home </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> article </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> edit_square </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> groups_3 </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> notifications </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> account_circle </span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="material-symbols-outlined"> language </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <navbar class="tablet">
+        <img
+          src="https://download.logo.wine/logo/Quora/Quora-Logo.wine.png"
+          height="80"
+        />
+        <ul id="menuListTablet">
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> home </span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> article </span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> edit_square </span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> groups_3 </span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> notifications </span>
+            </button>
+          </li>
+          <div class="search-container_tab">
+            <span class="material-symbols-outlined"> search </span>
+            Search&nbsp;Quora
+          </div>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> account_circle </span>
+            </button>
+          </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> language </span>
+            </button>
+          </li>
+          <button class="add">
+          Add Question
+        </button>
+        </ul>
+        
+      </navbar>
+    </header>
 
-  <main>
-    <div class="question-form">
-      <textarea id="questionContent" placeholder="Ask a question..."></textarea>
-      <button id="askQuestion">Ask Question</button>
-    </div>
+    <!-- <main>
+      <div class="question-form">
+        <textarea
+          id="questionContent"
+          placeholder="Ask a question..."
+        ></textarea>
+        <button id="askQuestion">Ask Question</button>
+      </div>
 
-    <div class="questions">
-      <!-- Questions and answers will be added here dynamically -->
-    </div>
-  </main>
+      <div class="questions">
+    
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2023 Quora Clone. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2023 Quora Clone. All rights reserved.</p>
+    </footer> -->
 
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
