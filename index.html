@@ -96,11 +96,6 @@
           </li>
           <li>
             <button>
-              <span class="material-symbols-outlined"> edit_square </span>
-            </button>
-          </li>
-          <li>
-            <button>
               <span class="material-symbols-outlined"> groups_3 </span>
             </button>
           </li>
@@ -109,9 +104,17 @@
               <span class="material-symbols-outlined"> notifications </span>
             </button>
           </li>
+          <li>
+            <button>
+              <span class="material-symbols-outlined"> edit_note </span>
+            </button>
+          </li>
+
           <div class="search-container_tab">
-            <span class="material-symbols-outlined"> search </span>
-            Search&nbsp;Quora
+            <div class="search">
+              <span class="material-symbols-outlined"> search </span
+              ><input type="text" placeholder="Search Quora" />
+            </div>
           </div>
           <li>
             <button>
@@ -123,7 +126,9 @@
               <span class="material-symbols-outlined"> language </span>
             </button>
           </li>
-          <button class="add">Add Question</button>
+          <div class="add-container_tab">
+            <button class="add">Add Question</button>
+          </div>
         </ul>
       </navbar>
     </header>
