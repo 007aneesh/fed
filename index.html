@@ -6,9 +6,10 @@
   <title>Quora Clone</title>
   <link rel="icon" href="//qsf.fs.quoracdn.net/-4-ans_frontend_assets.favicon-new.ico-26-e7e93fe0a7fbc991.ico">
   <link rel="stylesheet" href="index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header>
+  <!-- <header>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -18,23 +19,84 @@
         <li><a href="#">Profile</a></li>
       </ul>
     </nav>
-  </header>
+  </header> -->
 
   <main>
-    <div class="question-form">
-      <textarea id="questionContent" placeholder="Ask a question..."></textarea>
-      <button id="askQuestion">Ask Question</button>
+    <!-- <div class="post-form">
+      <textarea id="postContent" placeholder="Write your post..."></textarea>
+      <button id="addPost">Add Post</button>
     </div>
+    <div class="posts" id="posts">
+      Posts will be added here dynamically
+    </div> -->
 
-    <div class="questions">
-      <!-- Questions and answers will be added here dynamically -->
-    </div>
+    <section class="home">
+      <div class="left">
+        <div class="menu">
+          <div class="menubar">
+
+            <div class="menu-btn">
+              <i class='bx bx-plus' ></i>
+              <h5 class="menu-text">Create Space</h5>
+            </div>
+
+            <div class="menu-btn">
+              <i class='bx bxs-business'></i>
+              <h5 class="menu-text">Business</h5>
+            </div>
+
+            <div class="menu-btn">
+              <i class='bx bxs-basketball' ></i>
+              <h5 class="menu-text">Sports</h5>
+            </div>
+
+            <div class="menu-btn">
+              <i class='bx bx-mobile-vibration'></i>
+              <h5 class="menu-text">Technology</h5>
+            </div>
+
+            <div class="menu-btn">
+              <i class='bx bxs-music'></i>
+              <h5 class="menu-text">Music</h5>
+            </div>
+
+            <div class="menu-btn">
+              <i class='bx bxl-graphql'></i>
+              <h5 class="menu-text">Science</h5>
+            </div>
+
+          </div>
+        </div>
+        <div class="menu-links">
+          <div class="links">
+            <div class="link">
+              <a href="#"><span>About</span> . <span>Careers</span> .</a>
+            </div>
+            <div class="link">
+              <a href="#"><span>Terms</span> . <span>Privacy</span> .</a>
+            </div>
+            <div class="link">
+              <a href="#"><span>Acceptable Use</span> .</a>
+            </div>
+            <div class="link">
+              <a href="#"><span>Business</span> . <span>Press</span> .</a>
+            </div>
+            <div class="link">
+              <a href="#"><span>your Ad Choices</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle"></div>
+      <div class="right"></div>
+    </section>
   </main>
 
-  <footer>
+  <!-- <footer>
     <p>&copy; 2023 Quora Clone. All rights reserved.</p>
-  </footer>
+  </footer> -->
 
   <script src="index.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
