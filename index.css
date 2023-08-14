@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #99999935;
+  height: 100dvh;
 }
 li {
   list-style: none;
@@ -196,15 +197,15 @@ h1 {
 .home .middle{
   border: 1px solid #111;
   margin: 0.6rem;
-  height: 94.3vh;
+  height: 85vh;
   margin-bottom: 0;
-  width: 38%;
+  width: 40%;
   overflow-y: scroll;
 }
 .home .right{
   border: 1px solid #111;
   height: 70vh;
-  width: 39%;
+  width: 30%;
   margin: 0.6rem;
 }
 .left .menu, .left .menu-links{
@@ -271,4 +272,28 @@ h1 {
 }
 .left .menu-links .links .link a span:hover{
   text-decoration: underline;
+}
+@media only screen and (max-width: 768px){
+  .left{
+    display: none;
+  }
+  .home .middle{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .home .right{
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .home .left{
+    display: block;
+  }
+  .home .middle{
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  .home .right{
+    display: none;
+  }
 }
