@@ -14,6 +14,10 @@ button {
   background: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container {
   max-width: 600px;
@@ -128,37 +132,66 @@ h1 {
 #menuListTablet {
   display: flex;
   padding: 0;
+  margin: 0;
+  height: 100%;
 }
 #menuListTablet > ul {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 #menuListTablet > li {
   margin: 0 0.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
+#menuListTablet > li:hover {
+  height: 92%;
+  border-bottom: 10px solid red;
+  border-radius: 8px;
+}
 .search-container_tab {
+  padding: 0.6rem 0;
+  margin: 0 0.1rem;
+  width: 10rem;
+}
+.add-container_tab {
+  padding: 0.3rem 0;
+  display: flex ;
+  align-items: center;
+}
+.search {
   display: flex;
   align-items: center;
   text-align: left;
   font-size: 0.8rem;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   color: rgba(116, 116, 116, 0.678);
-  padding: 5px 4rem 5px 10px;
+  padding: 5px;
   border: 1px solid rgba(128, 128, 128, 0.355);
   border-radius: 5px;
 }
-
+.search input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  outline: none;
+}
 .add {
   display: flex;
   flex-wrap: nowrap;
   background-color: red;
+  font-weight: bold;
   color: white;
-  padding: 4px 15px;
+  width: 9rem;
+  padding: 10px 15px;
   align-items: center;
   justify-content: center;
   border-radius: 18px;
@@ -176,26 +209,30 @@ h1 {
   #menuListTablet > li {
     margin: 0 1rem;
   }
-  
-  
+  .search-container_tab {
+    width: 15rem;
+    margin: 0 2rem;
+  }
+  .add{
+    width: 10rem;
+  }
 }
-.home{
+.home {
   display: flex;
   flex-direction: row;
   padding: 1rem;
   padding-bottom: 0;
   /* align-items: center; */
   /* justify-content: center; */
-  
 }
-.home .left{
+.home .left {
   /* border: 1px solid #111; */
   height: 70vh;
   width: 23%;
   margin: 0.6rem;
 }
-.home .middle{
-  /* border: 1px solid #111; */
+.home .middle {
+  border: 1px solid #111;
   margin: 0.6rem;
   height: 85vh;
   margin-bottom: 0;
@@ -205,98 +242,96 @@ h1 {
 .home .middle::-webkit-scrollbar{
   display: none;
 }
-.home .right{
+.home .right {
   border: 1px solid #111;
   height: 70vh;
   width: 30%;
   margin: 0.6rem;
 }
-.left .menu, .left .menu-links{
+.left .menu,
+.left .menu-links {
   display: flex;
   justify-content: right;
   padding-right: 1rem;
-  
 }
-.left .menu .menubar{
+.left .menu .menubar {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
   border-bottom: 1px solid #999;
 }
-.left .menu-links .links{
+.left .menu-links .links {
   padding: 0rem;
   display: flex;
   flex-direction: column;
   align-items: start;
   margin-top: 2rem;
 }
-.left .menu .menubar .menu-btn{
+.left .menu .menubar .menu-btn {
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: start;
-  justify-content:flex-start;
+  justify-content: flex-start;
   padding: 0.7rem;
   border-radius: 3px;
   cursor: pointer;
   margin-bottom: 0.2rem;
 }
-.left .menu-links .links .link{
+.left .menu-links .links .link {
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: start;
-  justify-content:flex-start;
+  justify-content: flex-start;
   padding: 0.2rem;
   /* border-radius: 3px; */
   cursor: pointer;
-  
 }
-.left .menu .menubar .menu-btn:hover{
+.left .menu .menubar .menu-btn:hover {
   background-color: #b6b5b572;
 }
-.left .menu .menubar .menu-btn .menu-text{
+.left .menu .menubar .menu-btn .menu-text {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 200;
   color: #686767;
-
 }
-.left .menu .menubar .menu-btn i{
+.left .menu .menubar .menu-btn i {
   padding-right: 0.4rem;
   color: #686767;
 }
-.left .menu-links .links .link a{
+.left .menu-links .links .link a {
   font-size: 0.8rem;
   text-decoration: none;
   color: #686767;
   letter-spacing: 1px;
 }
-.left .menu-links .links .link a span:hover{
+.left .menu-links .links .link a span:hover {
   text-decoration: underline;
 }
-@media only screen and (max-width: 768px){
-  .left{
+@media only screen and (max-width: 768px) {
+  .left {
     display: none;
   }
-  .home .middle{
+  .home .middle {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .home .right{
+  .home .right {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px){
-  .home .left{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home .left {
     display: block;
   }
-  .home .middle{
+  .home .middle {
     width: 70%;
     margin-bottom: 1rem;
   }
-  .home .right{
+  .home .right {
     display: none;
   }
 }
