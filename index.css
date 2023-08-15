@@ -8,6 +8,16 @@ body {
 li {
   list-style: none;
 }
+a{
+  color: #111;
+  text-decoration: none;
+}
+
+
+
+a:hover{
+  text-decoration: underline;
+}
 button {
   border: none;
   outline: none;
@@ -163,7 +173,7 @@ h1 {
 }
 .add-container_tab {
   padding: 0.3rem 0;
-  display: flex ;
+  display: flex;
   align-items: center;
 }
 .search {
@@ -196,27 +206,7 @@ h1 {
   justify-content: center;
   border-radius: 18px;
 }
-@media only screen and (min-width: 768px) {
-  .mobile {
-    display: none;
-  }
-  .tablet {
-    display: flex;
-  }
-}
 
-@media only screen and (min-width: 1024px) {
-  #menuListTablet > li {
-    margin: 0 1rem;
-  }
-  .search-container_tab {
-    width: 15rem;
-    margin: 0 2rem;
-  }
-  .add{
-    width: 10rem;
-  }
-}
 .home {
   display: flex;
   flex-direction: row;
@@ -242,12 +232,38 @@ h1 {
 .home .middle::-webkit-scrollbar{
   display: none;
 }
-.home .right {
-  border: 1px solid #111;
-  height: 70vh;
-  width: 30%;
+
+
+.right {
+  height: 70%;
+  width: 20dvw;
   margin: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: white;
+  overflow: scroll;
 }
+.news {
+  width: 50%;
+  display: flex;
+  height: 2.5rem;
+  position: relative;
+  background-color: white;
+  align-items: center;
+  padding: 0 1rem;
+}
+.right-box {
+  height: 80%;
+  padding: 1rem 0;
+  overflow: scroll;
+}
+
+.right-box > ul > li > p {
+  margin-bottom: 4px;
+}
+
+
+
 .left .menu,
 .left .menu-links {
   display: flex;
@@ -310,6 +326,31 @@ h1 {
 }
 .left .menu-links .links .link a span:hover {
   text-decoration: underline;
+}
+.right::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #menuListTablet > li {
+    margin: 0 1rem;
+  }
+  .search-container_tab {
+    width: 15rem;
+    margin: 0 2rem;
+  }
+  .add {
+    width: 10rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .left {
