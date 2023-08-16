@@ -2,6 +2,11 @@ const addPostButton = document.getElementById("addPost");
 const postContentInput = document.getElementById("postContent");
 const postsContainer = document.getElementById("posts");
 
+const btn = document.getElementById('btn');
+
+
+
+
 addPostButton.addEventListener("click", () => {
   const postContent = postContentInput.value.trim();
   if (postContent) {
