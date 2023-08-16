@@ -60,7 +60,7 @@ button {
   border-bottom: 1px solid gray;
 }
 .top {
-  background-color: red;
+  background-color: #b92b27;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -92,6 +92,9 @@ button {
   align-items: center;
   justify-content: center;
 }
+span > .material-symbols-outlined{
+  font-size: 1rem;
+}
 button > .material-symbols-outlined {
   height: 100%;
   font-size: 1.8rem;
@@ -107,6 +110,10 @@ button > .material-symbols-outlined {
   height: 100%;
   margin-right: 5px;
 }
+.iconText img{
+  width: 7rem;
+  height: 3rem;
+}
 h1 {
   margin: 0;
 }
@@ -115,7 +122,13 @@ h1 {
   align-items: center;
   color: white;
   gap: 1px;
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 0.97rem;
+  letter-spacing: 1px;
+}
+.search-container .material-symbols-outlined{
+  font-size: 1.3rem;
+  padding-right: 0.2rem;
 }
 .add-container {
   display: flex;
@@ -123,9 +136,12 @@ h1 {
   color: white;
   gap: 3px;
   margin-right: 0.7rem;
-  font-weight: bold;
+  font-weight: 300;
 }
-
+.add-container .material-symbols-outlined{
+  font-size: 1.3rem;
+  padding-right: 0.2rem;
+}
 .tablet {
   display: none;
   justify-content: center;
@@ -156,15 +172,18 @@ h1 {
 
 #menuListTablet > li {
   margin: 0 0.5rem;
+  padding: 0 5px;
   height: 100%;
   display: flex;
   align-items: center;
+  transition: all 0.1s ease-in-out;
 }
 
 #menuListTablet > li:hover {
   height: 92%;
-  border-bottom: 10px solid red;
-  border-radius: 8px;
+  border-bottom: 3px solid #b92b27;
+  background-color: #d6d6d63a;
+  /* border-radius: 8px; */
 }
 .search-container_tab {
   padding: 0.6rem 0;
@@ -197,7 +216,7 @@ h1 {
 .add {
   display: flex;
   flex-wrap: nowrap;
-  background-color: red;
+  background-color: #b92b27;
   font-weight: bold;
   color: white;
   width: 9rem;
@@ -222,9 +241,9 @@ h1 {
   margin: 0.6rem;
 }
 .home .middle {
-  border: 1px solid #111;
+  /* border: 1px solid #111; */
   margin: 0.6rem;
-  height: 85vh;
+  height: 89vh;
   margin-bottom: 0;
   width: 40%;
   overflow-y: scroll;
@@ -250,7 +269,12 @@ h1 {
   position: relative;
   background-color: white;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
+}
+.news h4{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #666;
 }
 .right-box {
   height: 80%;
@@ -272,6 +296,7 @@ h1 {
 }
 .left .menu .menubar {
   padding: 0.5rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -308,6 +333,9 @@ h1 {
 .left .menu .menubar .menu-btn:hover {
   background-color: #b6b5b572;
 }
+.left .menu .menubar .active{
+  background-color: #dbdada74;
+}
 .left .menu .menubar .menu-btn .menu-text {
   margin-top: 0;
   margin-bottom: 0;
@@ -342,7 +370,8 @@ h1 {
 
 @media only screen and (min-width: 1024px) {
   #menuListTablet > li {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+    padding: 0 0.7rem;
   }
   .search-container_tab {
     width: 15rem;
@@ -385,6 +414,7 @@ h1 {
   width: 100%;
   height: 15%;
   margin: 1rem 0;
+  margin-top: 0;
   border-radius: 6px;
   /* background-color: #5e5d5d7e; */
   background-color: #fff;
@@ -459,4 +489,226 @@ h1 {
 }
 .middle .question .ques-btns .bordstart{
   margin-left: 0.7rem;
+}
+
+.middle .post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+  /* height: 15%; */
+  margin-top: 1rem;
+  border: none;
+  border-radius: 6px;
+  /* background-color: #5e5d5d7e; */
+  background-color: #fff;
+}
+.middle .post .pt{
+  display: flex;
+  width: 100%;
+}
+.middle .post .post-top{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.middle .post .post-top .posttop-user{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -3px;
+  /* width: 10%; */
+  font-size: 2.7rem;
+  margin-right: 0.3rem;
+  color: #999;
+  cursor: pointer;
+}
+.middle .post .post-top .posttop-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.middle .post .post-top .posttop-name h5{
+  margin: 0.2rem;
+  font-size: 0.8rem;
+}
+.middle .post .post-top .posttop-name span{
+  color: #2e69ff;
+}
+.middle .post .post-top .posttop-name span:hover{
+  text-decoration: underline;
+}
+.middle .post .post-top .posttop-name .posttopname-desig p{
+  margin: 0.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  color: #666;
+}
+.middle .post .post-top .posttop-name .posttopname-desig span{
+  color: #666;
+}
+.middle .post .post-top .posttop-close{
+  font-size: 1.3rem;
+  right: 1rem;
+  margin: 0;
+  cursor: pointer;
+}
+.middle .post .post-top .posttop-close i{
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: all 0.2s ease-in-out;
+
+}
+.middle .post .post-top .posttop-close i:hover{
+  background-color: #dadada7a;
+}
+
+.middle .post .post-mid{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: flex-start; */
+  width: 100%;
+  margin-left: 0.8rem;
+}
+.middle .post .post-mid .postmid-ques{
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  margin-bottom: 0.3rem;
+  line-height: 1.4rem;
+  cursor: pointer;
+}
+.middle .post .post-mid .postmid-ans{
+  line-height: 1.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+}
+.middle .post .post-mid .postmid-image{
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.middle .post .post-end{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.middle .post .post-end .postend-likes{
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.3rem;
+
+}
+.middle .post .post-end .postend-likes .postendlikes-like{
+  display: flex;
+  flex-direction: row;
+  height: 2.2rem;
+  /* padding: 0.3rem; */
+  border-radius: 50px;
+  border: 1px solid #bbbbbb69;
+  background-color: #e5e5e549;
+}
+.middle .post .post-end .postend-likes .postendlikes-like .upvote{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.9rem;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: 1px solid #bbbbbb69;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.middle .post .post-end .postend-likes .postendlikes-like .upvote:hover{
+  background-color: #c8c8c831;
+}
+.middle .post .post-end .postend-likes .postendlikes-like .upvote i{
+  font-size: 1.2rem;
+  padding-right: 0.2rem;
+  color: #2e69ff;
+}
+.middle .post .post-end .postend-likes .postendlikes-like .upvote h5{
+  color: #767676;
+  font-weight: 600;
+}
+.middle .post .post-end .postend-likes .postendlikes-like .downvote{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0 0.7rem;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: #767676;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  /* border-right: 1px solid #777; */
+}
+.middle .post .post-end .postend-likes .postendlikes-like .downvote:hover{
+  background-color: #c8c8c831;
+}
+.middle .post .post-end .postend-likes .postendlikes-comment{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  /* border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; */
+  border-radius: 50px;
+  margin-left: 0.7rem;
+  color: #767676;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.middle .post .post-end .postend-likes .postendlikes-comment:hover{
+  background-color: #c8c8c831;
+}
+
+.middle .post .post-end .postend-likes .postendlikes-share{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  /* border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; */
+  border-radius: 50px;
+  margin-left: 0.5rem;
+  color: #767676;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.middle .post .post-end .postend-likes .postendlikes-share:hover{
+  background-color: #c8c8c831;
+}
+
+.middle .post .post-end .postend-menu{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  /* border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; */
+  border-radius: 50px;
+  margin-left: 0.5rem;
+  color: #767676;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.middle .post .post-end .postend-menu:hover{
+  background-color: #c8c8c831;
 }
