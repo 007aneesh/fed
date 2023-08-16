@@ -239,7 +239,6 @@ h1 {
   flex-direction: row;
   padding: 1rem;
   padding-bottom: 0;
-  margin: 0;
   width: 100%;
   /* align-items: center; */
   /* justify-content: center; */
@@ -256,6 +255,7 @@ h1 {
   height: calc(100vh - 5.5rem);
   margin-bottom: 0;
   width: 40%;
+  margin-right: 0;
   overflow-y: scroll;
 }
 .home .middle::-webkit-scrollbar{
@@ -265,13 +265,21 @@ h1 {
 
 .right {
   height: 70%;
-  
   width: 25%;
   margin: 0.6rem;
+  /* padding: 0.5rem; */
+  /* border-radius: 10px;
+  background: white;
+  overflow: scroll; */
+}
+.right .rightdata{
+  /* height: 70%; */
+  width: 20dvw;
+  /* margin: 0.6rem; */
   padding: 0.5rem;
   border-radius: 10px;
   background: white;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .news {
   width: 50%;
@@ -309,6 +317,7 @@ h1 {
   padding: 0.5rem;
   padding-right: 0;
   padding-top: 0;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -374,6 +383,7 @@ h1 {
 
 
 
+
 .dialog{
   position: absolute;
   top: 0;
@@ -391,6 +401,7 @@ h1 {
   /* width: 100%; */
   background-color: white;
 }
+
 
 
 
@@ -579,6 +590,7 @@ h1 {
   padding-right: 0.4rem;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
+  margin-bottom: 0.5rem;
   color: #555;
   cursor: pointer;
 }
@@ -705,8 +717,6 @@ h1 {
 .middle .post .post-end .postend-menu:hover{
   background-color: #c8c8c831;
 }
-
-
 
 @media only screen and (min-width: 768px) {
   .mobile {
