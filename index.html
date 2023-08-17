@@ -33,7 +33,7 @@
           <div class="iconText">
             <img src="images/logo.png" />
           </div>
-          <div class="add-container">
+          <div onclick="dialog()" class="add-container">
             <span class="material-symbols-outlined"> add_circle </span>
             Add
           </div>
@@ -127,14 +127,18 @@
             </button>
           </li>
           <div class="add-container_tab">
-            <button class="add">Add Question</button>
+            <button onclick="dialog()" class="add">Add Question</button>
           </div>
         </ul>
       </navbar>
     </header>
-    <!-- <div class="dialog">
-      <div class="dialogContent">hi</div>
-    </div> -->
+    <div id="dialog" >
+      <div  id="dialogContent">
+        <span id="dialogClose" onclick="dialogClose()">
+          X
+        </span>
+      </div>
+    </div>
     <main>
       <section class="home">
         <div class="left">
@@ -207,15 +211,15 @@
               </div>
             </div>
             <div class="ques-btns">
-              <div class="ask-btn bordstart">
+              <div onclick="dialog()" class="ask-btn bordstart">
                 <i class="bx bx-message-rounded-dots"></i>
                 <h5>Ask</h5>
               </div>
-              <div class="ask-btn">
+              <div onclick="dialog()" class="ask-btn">
                 <i class="bx bx-edit"></i>
                 <h5>Answer</h5>
               </div>
-              <div class="ask-btn bordend">
+              <div onclick="dialog()" class="ask-btn bordend">
                 <i class="bx bxs-pencil"></i>
                 <h5>Post</h5>
               </div>

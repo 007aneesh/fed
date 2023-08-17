@@ -1,28 +1,23 @@
-const addPostButton = document.getElementById("addPost");
-const postContentInput = document.getElementById("postContent");
-const postsContainer = document.getElementById("posts");
-
-const btn = document.getElementById('btn');
-
-
-
-
-addPostButton.addEventListener("click", () => {
-  const postContent = postContentInput.value.trim();
-  if (postContent) {
-    const postElement = document.createElement("div");
-    postElement.classList.add("post");
-    postElement.textContent = postContent;
-
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", () => {
-      postsContainer.removeChild(postElement);
-    });
-
-    postElement.appendChild(deleteButton);
-    postsContainer.appendChild(postElement);
-
-    postContentInput.value = "";
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  var dialog = document.getElementById("dialog");
+  dialog.style.display = "none";
 });
+
+function dialog() {
+  var dialog = document.getElementById("dialog");
+  var content = document.getElementById("dialogContent");
+
+  dialog.style.display = dialog.style.display === "block" ? "none" : "block";
+  dialog.classList.toggle("dialog");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+  content.classList.toggle("dialogContent");
+}
+
+function dialogClose() {
+  var dialog = document.getElementById("dialog");
+  var content = document.getElementById("dialogContent");
+  dialog.style.display = "none";
+  content.style.display = "none";
+  dialog.classList.toggle("dialog");
+  content.classList.toggle("dialogContent");
+}
