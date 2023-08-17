@@ -7,7 +7,7 @@ function dialog() {
   var dialog = document.getElementById("dialog");
   var content = document.getElementById("dialogContent");
 
-  dialog.style.display = dialog.style.display === "block" ? "none" : "block";
+  dialog.style.display = dialog.style.display === "flex" ? "none" : "flex";
   dialog.classList.toggle("dialog");
   content.style.display = content.style.display === "block" ? "none" : "block";
   content.classList.toggle("dialogContent");
