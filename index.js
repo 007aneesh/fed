@@ -36,3 +36,8 @@ dialogContain.addEventListener('transitionend', () => {
 });
 
 // no scroll end
+
+// Adding post javascript below
+
+
+// Deleting post javascript below
