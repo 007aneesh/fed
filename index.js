@@ -21,3 +21,6 @@ function dialogClose() {
   dialog.classList.toggle("dialog");
   content.classList.toggle("dialogContent");
 }
+
+
+// creation 
