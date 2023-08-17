@@ -22,5 +22,17 @@ function dialogClose() {
   content.classList.toggle("dialogContent");
 }
 
+// no scroll when dialog visible
 
-// creation 
+const dialogContain = document.getElementById("dialog");
+const body = document.querySelector("body");
+if (dialogContain.style.display !== "none") {
+  body.classList.add("no-scroll");
+}
+dialogContain.addEventListener('transitionend', () => {
+  if (dialogContain.style.display === 'none') {
+    body.classList.remove('no-scroll');
+  }
+});
+
+// no scroll end
