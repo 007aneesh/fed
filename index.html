@@ -134,7 +134,69 @@
     </header>
     <div id="dialog">
       <div id="dialogContent">
-        <span id="dialogClose" onclick="dialogClose()"> X </span>
+        <span id="dialogClose" onclick="dialogClose()"><i class="bx bx-x"></i></span>
+        <div class="dialogData">
+          <div class="topDialog">
+            <div class="topdialogButton1 active" id="dialogButton1">
+              <button onclick="addBtn1()" class="btn">Add Question</button>
+            </div>
+            <div class="topdialogButton2" id="dialogButton2">
+              <button onclick="addBtn2()" class="btn">Create Post</button>
+            </div>
+          </div>
+          <div class="bottomDialogFirst" id="bottomDialog1">
+            <div class="dialogfirstContent">
+              <div class="tips">
+                <p>Tips on getting good answers quickly</p>
+                <ul>
+                  <li>Make sure your question has not been asked already</li>
+                  <li>Keep your question short and to the point</li>
+                  <li>Double-check grammar and spelling</li>
+                </ul>
+              </div>
+              <div class="logo">
+                <div class="image"><i class="bx bxs-user-circle"></i></div>
+                <i class='bx bxs-right-arrow arr'></i>
+                <div class="public">
+                  <i class='bx bx-group'></i>
+                  <p>Public</p>
+                  <i class='bx bx-chevron-down'></i>
+                </div>
+              </div>
+              <div class="input">
+                <input id="textInput" type="text" placeholder='Start your question with "What", "How","Why", etc.'>
+              </div>
+            </div>
+            <div class="dialogfirstButton">
+              <button class="btnClose" onclick="dialogClose()">Cancel</button>
+              <button class="addQues">Add Question</button>
+            </div>
+          </div>
+          <div class="bottomDialogSecond" id="bottomDialog2">
+            <div class="dialogsecondContent">
+              <div class="secondcontentTop">
+                <div class="image"><i class="bx bxs-user-circle"></i></div>
+                <div class="text">
+                  <h3>Akash</h3>
+                  <div class="credentials">
+                    <p>Choose Credential</p>
+                    <i class='bx bx-chevron-right'></i>
+                  </div>
+                </div>
+              </div>
+              <textarea rows="18" placeholder="Say Something..."></textarea>
+            </div>
+            <div class="dialogsecondButton">
+              <div class="textimage">
+                <i class='bx bx-font-family'></i>
+                <i class='bx bx-images'></i>
+              </div>
+              <div class="button">
+                <button class="addPost">Post</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
           
         </div>
