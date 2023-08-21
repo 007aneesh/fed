@@ -55,8 +55,6 @@ function addBtn2(){
   bottomDialog1.style.display = "none";
 }
 
-// no scroll end
-
 // Adding post javascript below
 
 
