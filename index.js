@@ -35,6 +35,26 @@ dialogContain.addEventListener('transitionend', () => {
   }
 });
 
+//adding dialog functionality
+
+const btn1 = document.getElementById("dialogButton1");
+const btn2 = document.getElementById("dialogButton2");
+const bottomDialog1 = document.getElementById("bottomDialog1");
+const bottomDialog2 = document.getElementById("bottomDialog2");
+
+function addBtn1(){
+  btn1.classList.add("active");
+  btn2.classList.remove("active");
+  bottomDialog1.style.display = "flex";
+  bottomDialog2.style.display = "none";
+}
+function addBtn2(){
+  btn2.classList.add("active");
+  btn1.classList.remove("active");
+  bottomDialog2.style.display = "flex";
+  bottomDialog1.style.display = "none";
+}
+
 // no scroll end
 
 // Adding post javascript below

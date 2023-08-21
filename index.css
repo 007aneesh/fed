@@ -761,6 +761,253 @@ h1 {
     width: 725px;
     height: 560px;
   }
+  #dialogClose i{
+    font-size: 1.6rem;
+  }
+  .dialogData{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    padding-bottom: 0;
+  }
+  .topDialog{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #b8b8b8a4;
+    
+  }
+  .topDialog .topdialogButton1{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    /* border-bottom: 3px solid #2e69ff; */
+    
+  }
+  .topDialog .btn{
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .topDialog .topdialogButton2{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .topDialog .active{
+    border-bottom: 2px solid #2e69ff;
+
+  }
+  .bottomDialogFirst{
+    display: flex;
+    flex-direction: column;
+  }
+  .bottomDialogSecond{
+    display: none;
+  }
+  .dialogfirstContent{
+    padding: 1rem 0;
+    height: 52.5vh;
+    width: 100%;
+    /* border-bottom: 2px solid #999; */
+  }
+  .dialogfirstContent .tips{
+    background-color: #ebf0ff;
+    padding: 1rem;
+  }
+  .dialogfirstContent .tips p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2e69ff;
+    padding-bottom: 0.2rem;
+  }
+  .dialogfirstContent .tips ul{
+    color: #2e69ff;
+    padding: 0.2rem 1rem;
+  }
+  .dialogfirstContent .tips ul li{
+    font-size: 0.9rem;
+    list-style-type: disc;
+    padding: 0.1rem 0;
+  }
+  .dialogfirstContent .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+  }
+  /* .dialogfirstContent .logo .image{
+    padding-right: 0.3rem;
+  } */
+  .dialogfirstContent .logo .image i{
+    font-size: 1.4rem;
+    color: #999;
+    cursor: pointer;
+  }
+  .dialogfirstContent .logo .arr{
+    font-size: 0.6rem;
+    color: #666;
+    padding: 0 0.3rem;
+  }
+  .logo .public{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #b8b8b890;
+    padding: 0.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .logo .public i{
+    font-size: 1.3rem;
+    color: #888;
+  }
+  .logo .public p{
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: #666;
+    padding: 0 0.28rem;
+  }
+
+  .dialogfirstContent .input{
+    width: 100%;
+  }
+  .dialogfirstContent .input #textInput{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bababa8d;
+    transition: all 0.1s ease-in-out;
+  }
+  .dialogfirstContent .input #textInput:hover{
+    border-bottom: 1px solid #2e69ff;
+  }
+  ::placeholder{
+    color: #999999de;
+  }
+  .dialogfirstButton{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    justify-content: flex-end;
+    border-top: 1px solid #d1d1d17c;
+    padding: 0.5rem 0;
+  }
+  .dialogfirstButton .btnClose{
+    padding-right: 1rem;
+    color: #666;
+    padding: 0.56rem 1rem;
+    border-radius: 50px;
+  }
+  .dialogfirstButton .addQues{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e69ff;
+    border: 1px solid #999;
+    padding: 0.56rem 1rem;
+    border-radius: 50px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #fff;
+    
+  }
+
+  .bottomDialogSecond{
+    /* display: flex; */
+    flex-direction: column;
+  }
+  .dialogsecondContent{
+    padding: 1rem 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #bfbfbfb1;
+  }
+  .bottomDialogSecond .secondcontentTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.7rem;
+  }
+  .bottomDialogSecond .secondcontentTop .credentials{
+    display: flex;
+    flex-direction: row;
+  }
+  .secondcontentTop .image i{
+    font-size: 3rem;
+    color: #999;
+  }
+  .secondcontentTop .text{
+    padding-left: 0.4rem;
+  }
+  .secondcontentTop .text h3{
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+  }
+  .secondcontentTop .text .credentials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    padding: 0.17rem 0.7rem;
+    border-radius: 50px;
+  }
+  .secondcontentTop .text .credentials p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #777;
+  }
+  .secondcontentTop .text .credentials i{
+    font-size: 1.4rem;
+    color: #777;
+  }
+  .dialogsecondContent textarea{
+    width: 100%;
+    resize: none;
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+  }
+  .dialogsecondButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+  }
+  .dialogsecondButton .textimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dialogsecondButton .textimage i{
+    
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.3rem;
+    margin-right: 0.2rem;
+    color: #777;
+    cursor: pointer;
+  }
+  .button .addPost{
+    border: 1px solid #999;
+    padding: 0.48rem 1rem;
+    border-radius: 50px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    background-color: #2e69ff;
+    color: #fff;
+  }
+  
 }
 @media only screen and (max-width: 768px) {
   .left {
