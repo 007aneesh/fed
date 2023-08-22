@@ -59,18 +59,18 @@ function addBtn2() {
 
 const postmidp = document.getElementsByClassName("postmid-ans");
 const postData = document.getElementById("postData");
-const postContainer = document.getElementById("middle");
+const postContainer = document.getElementById("postContain");
 function postValue(){
   
 
   let post = createPost();
-  postContainer.appendChild(post);
+  postContainer.prepend(post);
   postData.value = "";
 }
 
 function quesValue(){
   let post = createQuestion();
-  postContainer.appendChild(post);
+  postContainer.prepend(post);
   textInput.value = '';
 }
 
