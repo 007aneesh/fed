@@ -96,7 +96,7 @@ function createPost() {
                   </div>
                 </div>
               </div>
-              <div class="posttop-close"><i class="bx bx-x"></i></div>
+              <div id="ansDel" class="posttop-close" onclick="ansDelete()"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               
@@ -156,7 +156,7 @@ function createQuestion() {
                   </div>
                 </div>
               </div>
-              <div class="posttop-close"><i class="bx bx-x"></i></div>
+              <div id="postDel" class="posttop-close" onclick="postDelete()"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               <h4 class="postmid-ques">
@@ -167,11 +167,11 @@ function createQuestion() {
               <div class="postend-likes">
                 <div class="postendlikes-like">
                   <div class="upvote">
-                    <i class="bx bx-upvote"></i>
-                    <h5>Upvote . 88</h5>
+                  <i class='bx bx-edit'></i>
+                    <h5>Answer</h5>
                   </div>
                   <div class="downvote" title="Downvote">
-                    <i class="bx bx-downvote"></i>
+                  <i class='bx bx-like'></i>
                   </div>
                 </div>
                 <div class="postendlikes-comment" title="Comment">
@@ -191,3 +191,22 @@ function createQuestion() {
 }
 
 // Deleting post javascript below
+
+function postDelete() {
+  const postDelElement = document.getElementById("postDel");
+  const postTopElement = postDelElement.closest(".post");
+
+  if (postTopElement) {
+      postTopElement.remove();
+  }
+}
+
+function ansDelete() {
+  const ansDelElement = document.getElementById("ansDel");
+  const postTopElement = ansDelElement.closest(".post");
+
+  if (postTopElement) {
+      postTopElement.remove();
+  }
+}
+
