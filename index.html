@@ -33,7 +33,7 @@
           <div class="iconText">
             <img src="images/logo.png" />
           </div>
-          <div onclick="dialog()" class="add-container">
+          <div onclick="dialog(); addBtn1();" class="add-container">
             <span class="material-symbols-outlined"> add_circle </span>
             Add
           </div>
@@ -127,7 +127,7 @@
             </button>
           </li>
           <div class="add-container_tab">
-            <button onclick="dialog()" class="add">Add Question</button>
+            <button onclick="dialog(); addBtn1();" class="add">Add Question</button>
           </div>
         </ul>
       </navbar>
@@ -169,13 +169,14 @@
                 <input
                   id="textInput"
                   type="text"
+                  
                   placeholder='Start your question with "What", "How","Why", etc.'
                 />
               </div>
             </div>
             <div class="dialogfirstButton">
               <button class="btnClose" onclick="dialogClose()">Cancel</button>
-              <button class="addQues">Add Question</button>
+              <button class="addQues" onclick="quesValue(); dialogClose();">Add Question</button>
             </div>
           </div>
           <div class="bottomDialogSecond" id="bottomDialog2">
@@ -190,7 +191,7 @@
                   </div>
                 </div>
               </div>
-              <textarea rows="18" placeholder="Say Something..."></textarea>
+              <textarea id="postData" rows="18" placeholder="Say Something..."></textarea>
             </div>
             <div class="dialogsecondButton">
               <div class="textimage">
@@ -198,7 +199,10 @@
                 <i class="bx bx-images"></i>
               </div>
               <div class="button">
-                <button class="addPost">Post</button>
+                <button onclick="
+                  postValue();
+                  dialogClose();"
+                 class="addPost">Post</button>
               </div>
             </div>
           </div>
@@ -269,115 +273,26 @@
           </div>
         </div>
 
-        <div class="middle">
+        <div class="middle" id="middle">
           <div class="question">
             <div class="top-ques">
               <div class="user-logo"><i class="bx bxs-user-circle"></i></div>
-              <div id="btn" class="user-ques" onclick="dialog()">
+              <div id="btn" class="user-ques" onclick="dialog(); addBtn1();">
                 <p>What do you want to ask or share?</p>
               </div>
             </div>
             <div class="ques-btns">
-              <div onclick="dialog()" class="ask-btn bordstart">
+              <div onclick="dialog(); addBtn1()" class="ask-btn bordstart">
                 <i class="bx bx-message-rounded-dots"></i>
                 <h5>Ask</h5>
               </div>
-              <div onclick="dialog()" class="ask-btn">
+              <div onclick="dialog(); addBtn2()" class="ask-btn">
                 <i class="bx bx-edit"></i>
                 <h5>Answer</h5>
               </div>
-              <div onclick="dialog()" class="ask-btn bordend">
+              <div onclick="dialog(); addBtn2()" class="ask-btn bordend">
                 <i class="bx bxs-pencil"></i>
                 <h5>Post</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="post">
-            <div class="post-top">
-              <div class="pt">
-                <div class="posttop-user">
-                  <i class="bx bxs-user-circle"></i>
-                </div>
-                <div class="posttop-name">
-                  <div class="posttopname-name">
-                    <h5>Trip O Dell . <span>Follow</span></h5>
-                  </div>
-                  <div class="posttopname-desig">
-                    <p>
-                      Worked at Microsoft (company) (2009–2011) .
-                      <span>Updated 3y</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="posttop-close"><i class="bx bx-x"></i></div>
-            </div>
-            <div class="post-mid">
-              <h4 class="postmid-ques">
-                How has Microsoft avoided the big tech backlash from government
-                that Google, Facebook, Amazon, and Apple are experiencing? Is it
-                less a consumer company than its peers (not dependent on the
-                harvesting of personal data like Facebook and Google are)?
-              </h4>
-              <p class="postmid-ans">
-                Microsoft doesn't forget. Compared to many tech companies,
-                people who do well at Microsoft don't leave very often. In fact,
-                many people say you aren't considered established at the company
-                for about 5 years. That's eons at a place like Amazon.<br /><br />
-
-                In the late 1990s, Microsoft was sued by the Justice Department
-                for antitrust violations and anti-competitive behavior. The
-                penalties and sanctions were very large and very painful. When I
-                worked there ten years later, that memory was still very fresh
-                among the veterans who lived through it.<br /><br />
-
-                Many of those people are still at the company. Microsoft is a
-                very disciplined (if sometimes odd) corporate culture. It
-                remembers its lore, the good and the bad, and they drill those
-                lessons into new employees so the same mistakes aren't
-                repeated.<br /><br />
-
-                I also found that Microsoft was extremely protective of customer
-                data. I worked in online services, and Microsoft would
-                frequently push back on overly broad requests from governments
-                for customer data, even when there was a subpoena. Microsoft was
-                also one of the few companies that fought the government and the
-                intelligence community's mass surveillance programs all the way
-                to the top of the judicial system in appeal after appeal in the
-                FISA courts.<br /><br />
-
-                People can bag on Redmond all they like, but MSFT is one of the
-                few companies that takes its security systems and customer data
-                very, very seriously.<br /><br />
-
-                They are meticulous about how they compete, and compared to many
-                companies in tech, they move a lot slower because they've
-                experienced the consequences of “winning at all costs” or “move
-                fast and break things”. Recklessness isn't a habit for companies
-                that think in decades. Experience is a good teacher.
-              </p>
-            </div>
-            <div class="post-end">
-              <div class="postend-likes">
-                <div class="postendlikes-like">
-                  <div class="upvote">
-                    <i class="bx bx-upvote"></i>
-                    <h5>Upvote . 88</h5>
-                  </div>
-                  <div class="downvote" title="Downvote">
-                    <i class="bx bx-downvote"></i>
-                  </div>
-                </div>
-                <div class="postendlikes-comment" title="Comment">
-                  <i class="bx bx-message-rounded-dots"></i>
-                </div>
-                <div class="postendlikes-share" title="Share">
-                  <i class="bx bx-share"></i>
-                </div>
-              </div>
-              <div class="postend-menu" title="More">
-                <i class="bx bx-dots-horizontal-rounded"></i>
               </div>
             </div>
           </div>
@@ -630,10 +545,6 @@
         </div>
       </section>
     </main>
-
-    <!-- <footer>
-    <p>&copy; 2023 Quora Clone. All rights reserved.</p>
-  </footer> -->
 
     <script src="index.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
