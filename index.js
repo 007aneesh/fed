@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   var dialog = document.getElementById("dialog");
   dialog.style.display = "none";
+
+  var dialogImg = document.getElementById("dialogImg");
+  dialogImg.style.display = "none";
 });
 
 function dialog() {
@@ -13,24 +16,59 @@ function dialog() {
   content.classList.toggle("dialogContent");
 }
 
+function dialogImg() {
+  var dialogImg = document.getElementById("dialogImg");
+  var imgcontent = document.getElementById("dialogImgContent");
+
+  dialogImg.style.display = dialogImg.style.display === "flex" ? "none" : "flex";
+  dialogImg.classList.toggle("dialogImg");
+  imgcontent.style.display = imgcontent.style.display === "block" ? "none" : "block";
+  imgcontent.classList.toggle("dialogImgContent");
+}
+
 function dialogClose() {
+
   var dialog = document.getElementById("dialog");
   var content = document.getElementById("dialogContent");
+  textInput.value = '';
+  postData.value = '';
   dialog.style.display = "none";
   content.style.display = "none";
   dialog.classList.toggle("dialog");
+
   content.classList.toggle("dialogContent");
+}
+
+function dialogImgClose() {
+
+  var dialogImg = document.getElementById("dialogImg");
+  var imgcontent = document.getElementById("dialogImgContent");
+  dialogImg.style.display = "none";
+  imgcontent.style.display = "none";
+  dialogImg.classList.toggle("dialogImg");
+  imgcontent.classList.toggle("dialogImgContent");
+  imgInput.value = '';
 }
 
 // no scroll when dialog visible
 
 const dialogContain = document.getElementById("dialog");
+const dialogImgContain = document.getElementById('dialogImg');
 const body = document.querySelector("body");
 if (dialogContain.style.display !== "none") {
   body.classList.add("no-scroll");
 }
 dialogContain.addEventListener("transitionend", () => {
   if (dialogContain.style.display === "none") {
+    body.classList.remove("no-scroll");
+  }
+});
+
+if (dialogImgContain.style.display !== "none") {
+  body.classList.add("no-scroll");
+}
+dialogImgContain.addEventListener("transitionend", () => {
+  if (dialogImgContain.style.display === "none") {
     body.classList.remove("no-scroll");
   }
 });
@@ -60,24 +98,47 @@ function addBtn2() {
 const postmidp = document.getElementsByClassName("postmid-ans");
 const postData = document.getElementById("postData");
 const postContainer = document.getElementById("postContain");
-function postValue(){
-  
+function postValue() {
+  if (postData.value == '') {
+    alert('Please write something');
+    addBtn2();
+    return;
+
+  }
+
 
   let post = createPost();
+  imgSrc ='';
+  imgInput.value = '';
   postContainer.prepend(post);
   postData.value = "";
+  
+  dialogClose();
 }
 
-function quesValue(){
+function quesValue() {
+  if (textInput.value == '') {
+    alert('Please write something');
+    addBtn1();
+    return;
+  }
   let post = createQuestion();
   postContainer.prepend(post);
   textInput.value = '';
+  dialogClose();
 }
-
+let counterPost  = 0;
 function createPost() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
   postdiv.classList.add("post");
+  let imgTag = '';
+
+  if (imgSrc!=='') {
+    imgTag = `<img class="postmid-image" id="imgId" loading="lazy" src=${imgSrc} />`;
+  }
+  
+  
 
   postdiv.innerHTML = ` <div class="post-top">
               <div class="pt">
@@ -96,13 +157,14 @@ function createPost() {
                   </div>
                 </div>
               </div>
-              <div id="ansDel" class="posttop-close" onclick="ansDelete()"><i class="bx bx-x"></i></div>
+              <div id="${counterPost}" class="posttop-close" onclick="ansDelete(${counterPost})"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               
               <p class="postmid-ans">
                 ${postData.value}
               </p>
+              ${imgTag}
               
             </div>
             <div class="post-end">
@@ -127,13 +189,14 @@ function createPost() {
                 <i class="bx bx-dots-horizontal-rounded"></i>
               </div>
             </div>`;
-
+            
+  counterPost += 1;
   return postdiv;
 }
 
 const postmidh4 = document.getElementById("postmid-ques");
 const textInput = document.getElementById('textInput');
-
+let counter =0;
 function createQuestion() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
@@ -156,7 +219,7 @@ function createQuestion() {
                   </div>
                 </div>
               </div>
-              <div id="postDel" class="posttop-close" onclick="postDelete()"><i class="bx bx-x"></i></div>
+              <div id="${counter}" class="posttop-close" onclick="postDelete(${counter})"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               <h4 class="postmid-ques">
@@ -186,27 +249,40 @@ function createQuestion() {
               </div>
             </div>
 `;
-
+  counter += 1;
   return postdiv;
 }
 
 // Deleting post javascript below
 
-function postDelete() {
-  const postDelElement = document.getElementById("postDel");
+function postDelete(count) {
+  const postDelElement = document.getElementById(count);
   const postTopElement = postDelElement.closest(".post");
 
   if (postTopElement) {
-      postTopElement.remove();
+    postTopElement.remove();
   }
 }
 
-function ansDelete() {
-  const ansDelElement = document.getElementById("ansDel");
+function ansDelete(count) {
+  const ansDelElement = document.getElementById(count);
   const postTopElement = ansDelElement.closest(".post");
 
   if (postTopElement) {
-      postTopElement.remove();
+    postTopElement.remove();
   }
+}
+
+// user input image handling
+
+const imgInput = document.getElementById("imgInput");
+const postImg = document.getElementById("postImg");
+var imgSrc;
+
+function imageAdd(){
+  imgSrc = imgInput.value || '';
+  // imgInput.value='';
+  dialogImgClose();
+  
 }
 
