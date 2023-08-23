@@ -132,8 +132,8 @@
         </ul>
       </navbar>
     </header>
-    <div id="dialog">
-      <div id="dialogContent">
+    <div id="dialog" onclick="dialogClose()">
+      <div id="dialogContent" onclick="event.stopPropagation()">
         <span id="dialogClose" onclick="dialogClose()"
           ><i class="bx bx-x"></i
         ></span>
@@ -169,17 +169,19 @@
                 <input
                   id="textInput"
                   type="text"
-                  
+                  required
                   placeholder='Start your question with "What", "How","Why", etc.'
                 />
               </div>
             </div>
             <div class="dialogfirstButton">
               <button class="btnClose" onclick="dialogClose()">Cancel</button>
-              <button class="addQues" onclick="quesValue(); dialogClose();">Add Question</button>
+              <button class="addQues" onclick="quesValue();">Add Question</button>
             </div>
           </div>
-          <div class="bottomDialogSecond" id="bottomDialog2">
+          <form>
+            <div class="bottomDialogSecond" id="bottomDialog2">
+            
             <div class="dialogsecondContent">
               <div class="secondcontentTop">
                 <div class="image"><i class="bx bxs-user-circle"></i></div>
@@ -191,20 +193,39 @@
                   </div>
                 </div>
               </div>
-              <textarea id="postData" rows="18" placeholder="Say Something..."></textarea>
+              <textarea required id="postData" rows="18" placeholder="Say Something..."></textarea>
             </div>
             <div class="dialogsecondButton">
               <div class="textimage">
                 <i class="bx bx-font-family"></i>
-                <i class="bx bx-images"></i>
+                <i onclick="dialogImg()" class="bx bx-images"></i>
               </div>
               <div class="button">
-                <button onclick="
+                <button type="button" onclick="
                   postValue();
-                  dialogClose();"
+                  "
                  class="addPost">Post</button>
               </div>
             </div>
+          </div>
+          </form>
+          
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div id="dialogImg" onclick="dialogImgClose()">
+      <div id="dialogImgContent" onclick="event.stopPropagation()">
+        <span id="dialogImgClose" onclick="dialogImgClose()"
+          ><i class="bx bx-x"></i
+        ></span>
+        <div class="dialogImgData">
+          <h3>
+            Insert the URL for your Image:
+          </h3>
+          <input type="text" id="imgInput" />
+          <div class="imgButton">
+            <button type="button" id="postImg" onclick="imageAdd()" >Add</button>
           </div>
         </div>
         <div></div>

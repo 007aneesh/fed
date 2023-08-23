@@ -257,6 +257,7 @@ h1 {
   width: 40%;
   margin-right: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .home .middle::-webkit-scrollbar{
   display: none;
@@ -396,7 +397,7 @@ h1 {
   right: 0;
   width: 100dvw;
   height: 100dvh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -415,6 +416,76 @@ h1 {
   position: relative;
   cursor: pointer;
   font-size: 1.6rem;
+}
+
+
+
+.dialogImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 100;
+}
+.dialogImg .dialogImgContent{
+  height: 25%;
+  padding: 15px;
+  position: relative;
+  border-radius: 10px;
+  width: 90%;
+  background-color: white;
+}
+
+#dialogImgClose{
+  position: relative;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.dialogImgData{
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 0;
+  padding-bottom: 0;
+}
+.dialogImgData h3{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+  padding: 0.3rem;
+}
+.dialogImgData input{
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  border: 1px solid #777;
+
+  
+}
+.dialogImgData .imgButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.imgButton button{
+  border: 1px solid #999;
+  padding: 0.5rem 1.3rem;
+  border-radius: 50px;
+  background-color: #2e69ff;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
 }
 
 
@@ -606,7 +677,7 @@ h1 {
   padding-right: 0.4rem;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  word-wrap: break-word;
   color: #555;
   cursor: pointer;
 }
@@ -993,6 +1064,51 @@ h1 {
     width: 700px;
     height: 596px;
   }
+
+  #dialogImgContent{
+    width: 500px;
+    height: auto;
+  }
+  .dialogImgData{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 0;
+    padding-bottom: 0;
+  }
+  .dialogImgData h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+    padding: 0.3rem;
+  }
+  .dialogImgData input{
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    border: 1px solid #777;
+
+    
+  }
+  .dialogImgData .imgButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .imgButton button{
+    border: 1px solid #999;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+    background-color: #2e69ff;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -1024,6 +1140,53 @@ h1 {
   }
   
   
+  #dialogImgContent{
+    width: 500px;
+    height: auto;
+  }
+  #dialogClose i{
+    font-size: 1.6rem;
+  }
+  .dialogImgData{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 0;
+    padding-bottom: 0;
+  }
+  .dialogImgData h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+    padding: 0.3rem;
+  }
+  .dialogImgData input{
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    margin: 0.3rem;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    border: 1px solid #777;
+
+    
+  }
+  .dialogImgData .imgButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .imgButton button{
+    border: 1px solid #999;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+    background-color: #2e69ff;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .left {
