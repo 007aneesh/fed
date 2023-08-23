@@ -127,7 +127,7 @@ function quesValue() {
   textInput.value = '';
   dialogClose();
 }
-
+let counterPost  = 0;
 function createPost() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
@@ -157,7 +157,7 @@ function createPost() {
                   </div>
                 </div>
               </div>
-              <div id="ansDel" class="posttop-close" onclick="ansDelete()"><i class="bx bx-x"></i></div>
+              <div id="${counterPost}" class="posttop-close" onclick="ansDelete(${counterPost})"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               
@@ -190,13 +190,13 @@ function createPost() {
               </div>
             </div>`;
             
-  
+  counterPost += 1;
   return postdiv;
 }
 
 const postmidh4 = document.getElementById("postmid-ques");
 const textInput = document.getElementById('textInput');
-
+let counter =0;
 function createQuestion() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
@@ -219,7 +219,7 @@ function createQuestion() {
                   </div>
                 </div>
               </div>
-              <div id="postDel" class="posttop-close" onclick="postDelete()"><i class="bx bx-x"></i></div>
+              <div id="${counter}" class="posttop-close" onclick="postDelete(${counter})"><i class="bx bx-x"></i></div>
             </div>
             <div class="post-mid">
               <h4 class="postmid-ques">
@@ -249,14 +249,14 @@ function createQuestion() {
               </div>
             </div>
 `;
-
+  counter += 1;
   return postdiv;
 }
 
 // Deleting post javascript below
 
-function postDelete() {
-  const postDelElement = document.getElementById("postDel");
+function postDelete(count) {
+  const postDelElement = document.getElementById(count);
   const postTopElement = postDelElement.closest(".post");
 
   if (postTopElement) {
@@ -264,8 +264,8 @@ function postDelete() {
   }
 }
 
-function ansDelete() {
-  const ansDelElement = document.getElementById("ansDel");
+function ansDelete(count) {
+  const ansDelElement = document.getElementById(count);
   const postTopElement = ansDelElement.closest(".post");
 
   if (postTopElement) {
