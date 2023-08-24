@@ -254,7 +254,7 @@ function createQuestion() {
 function postDelete(count) {
   const postDelElement = document.getElementById(count);
   const postTopElement = postDelElement.closest(".post");
-  let check = confirm("Do you really want to delete the question?");
+  let check = confirm("Do you want to delete the question?");
   if (check === true) {
     if (postTopElement) {
       postTopElement.remove();
@@ -265,7 +265,7 @@ function postDelete(count) {
 function ansDelete(count) {
   const ansDelElement = document.getElementById(count);
   const postTopElement = ansDelElement.closest(".post");
-  let check = confirm("Do you really want to delete the post?");
+  let check = confirm("Do you want to delete the post?");
   if (check === true) {
     if (postTopElement) {
       postTopElement.remove();
