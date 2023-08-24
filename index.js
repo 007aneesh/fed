@@ -20,18 +20,19 @@ function dialogImg() {
   var dialogImg = document.getElementById("dialogImg");
   var imgcontent = document.getElementById("dialogImgContent");
 
-  dialogImg.style.display = dialogImg.style.display === "flex" ? "none" : "flex";
+  dialogImg.style.display =
+    dialogImg.style.display === "flex" ? "none" : "flex";
   dialogImg.classList.toggle("dialogImg");
-  imgcontent.style.display = imgcontent.style.display === "block" ? "none" : "block";
+  imgcontent.style.display =
+    imgcontent.style.display === "block" ? "none" : "block";
   imgcontent.classList.toggle("dialogImgContent");
 }
 
 function dialogClose() {
-
   var dialog = document.getElementById("dialog");
   var content = document.getElementById("dialogContent");
-  textInput.value = '';
-  postData.value = '';
+  textInput.value = "";
+  postData.value = "";
   dialog.style.display = "none";
   content.style.display = "none";
   dialog.classList.toggle("dialog");
@@ -40,20 +41,19 @@ function dialogClose() {
 }
 
 function dialogImgClose() {
-
   var dialogImg = document.getElementById("dialogImg");
   var imgcontent = document.getElementById("dialogImgContent");
   dialogImg.style.display = "none";
   imgcontent.style.display = "none";
   dialogImg.classList.toggle("dialogImg");
   imgcontent.classList.toggle("dialogImgContent");
-  imgInput.value = '';
+  imgInput.value = "";
 }
 
 // no scroll when dialog visible
 
 const dialogContain = document.getElementById("dialog");
-const dialogImgContain = document.getElementById('dialogImg');
+const dialogImgContain = document.getElementById("dialogImg");
 const body = document.querySelector("body");
 if (dialogContain.style.display !== "none") {
   body.classList.add("no-scroll");
@@ -99,46 +99,42 @@ const postmidp = document.getElementsByClassName("postmid-ans");
 const postData = document.getElementById("postData");
 const postContainer = document.getElementById("postContain");
 function postValue() {
-  if (postData.value == '') {
-    alert('Please write something');
+  if (postData.value == "") {
+    alert("Please write something");
     addBtn2();
     return;
-
   }
 
-
   let post = createPost();
-  imgSrc ='';
-  imgInput.value = '';
+  imgSrc = "";
+  imgInput.value = "";
   postContainer.prepend(post);
   postData.value = "";
-  
+
   dialogClose();
 }
 
 function quesValue() {
-  if (textInput.value == '') {
-    alert('Please write something');
+  if (textInput.value == "") {
+    alert("Please write something");
     addBtn1();
     return;
   }
   let post = createQuestion();
   postContainer.prepend(post);
-  textInput.value = '';
+  textInput.value = "";
   dialogClose();
 }
-let counterPost  = 0;
+let counterPost = 0;
 function createPost() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
   postdiv.classList.add("post");
-  let imgTag = '';
+  let imgTag = "";
 
-  if (imgSrc!=='') {
+  if (imgSrc !== "") {
     imgTag = `<img class="postmid-image" id="imgId" loading="lazy" src=${imgSrc} />`;
   }
-  
-  
 
   postdiv.innerHTML = ` <div class="post-top">
               <div class="pt">
@@ -189,14 +185,14 @@ function createPost() {
                 <i class="bx bx-dots-horizontal-rounded"></i>
               </div>
             </div>`;
-            
+
   counterPost += 1;
   return postdiv;
 }
 
 const postmidh4 = document.getElementById("postmid-ques");
-const textInput = document.getElementById('textInput');
-let counter =0;
+const textInput = document.getElementById("textInput");
+let counter = 0;
 function createQuestion() {
   // e.preventDefault();
   const postdiv = document.createElement("div");
@@ -258,18 +254,22 @@ function createQuestion() {
 function postDelete(count) {
   const postDelElement = document.getElementById(count);
   const postTopElement = postDelElement.closest(".post");
-
-  if (postTopElement) {
-    postTopElement.remove();
+  let check = confirm("Do you really want to delete the question?");
+  if (check === true) {
+    if (postTopElement) {
+      postTopElement.remove();
+    }
   }
 }
 
 function ansDelete(count) {
   const ansDelElement = document.getElementById(count);
   const postTopElement = ansDelElement.closest(".post");
-
-  if (postTopElement) {
-    postTopElement.remove();
+  let check = confirm("Do you really want to delete the post?");
+  if (check === true) {
+    if (postTopElement) {
+      postTopElement.remove();
+    }
   }
 }
 
@@ -279,10 +279,8 @@ const imgInput = document.getElementById("imgInput");
 const postImg = document.getElementById("postImg");
 var imgSrc;
 
-function imageAdd(){
-  imgSrc = imgInput.value || '';
+function imageAdd() {
+  imgSrc = imgInput.value || "";
   // imgInput.value='';
   dialogImgClose();
-  
 }
-
